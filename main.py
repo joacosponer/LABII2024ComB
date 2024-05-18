@@ -1,16 +1,31 @@
-# This is a sample Python script.
+import persona
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+lista_propietarios = []
+lista_veterinarios = []
 
 
-# Press the green button in the gutter to run the script.
+def cargar_propietarios():
+    with open("propietarios.txt") as file:
+        renglones = file.readlines()
+        for renglon in renglones:
+            datos = renglon.strip().split(",")
+            lista_propietarios.append(persona.Propietario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]))
+
+
+def cargar_veterinarios():
+    with open("veterinarios.txt") as file:
+        renglones = file.readlines()
+        for renglon in renglones:
+            datos = renglon.strip().split(",")
+            lista_veterinarios.append(persona.Veterinario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]))
+
+
+def main():
+    cargar_propietarios()
+    cargar_veterinarios()
+    print(lista_propietarios)
+    print(lista_veterinarios)
+
+
 if __name__ == '__main__':
-    print("hola")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
