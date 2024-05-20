@@ -5,6 +5,7 @@ lista_veterinarios = []
 
 
 def cargar_propietarios():
+
     with open("propietarios.txt") as file:
         renglones = file.readlines()
         for renglon in renglones:
