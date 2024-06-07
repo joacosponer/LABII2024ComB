@@ -14,11 +14,22 @@ class Persona:
     def __repr__(self):
         return f"nombre: {self.nombre}"
 
+    def get_estado(self):
+        return f"codigo: {self.codigo} - {self.nombre} - estado: {self.estado}"
+
+    def habilitar(self):
+        self.estado = 1
+
+    def deshabilitar(self):
+        self.estado = 0
+
 
 class Propietario(Persona):
 
     def __init__(self, nombre, direccion, mail, dni, codigo, estado):
         super().__init__(nombre, direccion, mail, dni, codigo, estado)
+
+
 
 
 class Veterinario(Persona):
