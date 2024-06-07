@@ -1,11 +1,11 @@
 import persona
 from vacunas import Vacunas
-from Consulta import consulta
+
 
 lista_propietarios = []
 lista_veterinarios = []
 lista_vacunas = []
-lista_consulta = []
+
 
 
 def cargar_propietarios():
@@ -32,23 +32,16 @@ def cargar_Vacuna():
             datos=linea.strip().split(",")
             lista_vacunas.append(Vacuna(datos[0], datos[1], datos[2], datos[3]))
 
-def cargar_consulta():
-    with open("Consulta.txt") as file:
-        lineas=file.readlines()
-        for linea in lineas:
-            datos=linea.strip().split(",")
-            lista_consulta.append(consulta(datos[0],datos[2],datos[3]))
 
 
 def main():
     cargar_propietarios()
     cargar_veterinarios()
     cargar_Vacuna()
-    cargar_consulta()
     print(lista_propietarios)
     print(lista_veterinarios)
     print(lista_vacunas)
-    print(lista_consulta)
+
 
 
 
