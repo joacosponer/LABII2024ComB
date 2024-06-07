@@ -1,4 +1,4 @@
-class Vacunas:
+class Vacuna:
     def __init__(self,nombre,tipo_vacuna,estado,precio):
         self.nombre = nombre
         self.tipo_vacuna = tipo_vacuna
