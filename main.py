@@ -1,6 +1,4 @@
 import persona
-from vacunas import Vacunas
-
 
 lista_propietarios = []
 lista_veterinarios = []
@@ -22,7 +20,8 @@ def cargar_veterinarios():
         renglones = file.readlines()
         for renglon in renglones:
             datos = renglon.strip().split(",")
-            lista_veterinarios.append(persona.Veterinario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]))
+            lista_veterinarios.append(
+                persona.Veterinario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]))
 
 
 def cargar_Vacuna():
