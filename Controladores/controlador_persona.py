@@ -1,10 +1,9 @@
-from Modelos.persona import Persona, Propietario, Veterinario
-from Vistas.vista_persona import VistaVeterinario, VistaPropietario, VistaPersona
+from Modelos.persona import Propietario, Veterinario
+from Vistas.vista_persona import VistaVeterinario, VistaPropietario
 
 
 class ControladorPersona:
-    def __init__(self, vista):
-        self.vista = VistaPropietario()
+    pass
 
 
 class ControladorPropietario:
@@ -19,7 +18,7 @@ class ControladorPropietario:
             datos = linea.strip().split(",")
             self.lista_propietarios.append(Propietario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]))
 
-    def registrar_nuevo(self):
+    def registrar_nuevo_propietario(self):
         nombre, direccion, mail, dni, codigo, estado = self.vista.registrar_nuevo_propietario()
         with open("Recursos/propietarios.txt", "a") as file:
             file.write(f"\n{nombre},{direccion},{mail},{dni},{codigo},{estado}")
@@ -52,6 +51,19 @@ class ControladorPropietario:
     def mostrar(self):
         self.vista.mostrar_props(self.lista_propietarios)
 
+    def menu_propietario(self):
+        while True:
+            opcion = self.vista.elegir_opcion()
+            if opcion == 1:
+                self.mostrar()
+            if opcion == 2:
+                self.registrar_nuevo_propietario()
+            if opcion == 3:
+                self.modificar_estado()
+            if self.vista.seguir_trabajando() == "no":
+                break
+        self.vista.mostrar_mensaje(mensaje="gestion de propietarios terminada!!!")
+
 
 class ControladorVeterinario:
     def __init__(self, vista=VistaVeterinario()):
@@ -66,7 +78,7 @@ class ControladorVeterinario:
                 self.lista_veterinarios.append(
                     Veterinario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]))
 
-    def registrar_nuevo(self):
+    def registrar_nuevo_veterinario(self):
         nombre, direccion, mail, dni, codigo, estado, especialidad = self.vista.registrar_nuevo_veterinario()
         with open("Recursos/veterinarios.txt", "a") as file:
             file.write(f"\n{nombre},{direccion},{mail},{dni},{codigo},{estado},{especialidad}")
@@ -93,4 +105,17 @@ class ControladorVeterinario:
 
     def mostrar(self):
         self.vista.mostrar_veterinarios(self.lista_veterinarios)
+
+    def menu_veterinario(self):
+        while True:
+            opcion = self.vista.elegir_opcion()
+            if opcion == 1:
+                self.mostrar()
+            if opcion == 2:
+                self.registrar_nuevo_veterinario()
+            if opcion == 3:
+                self.modificar_estado()
+            if self.vista.seguir_trabajando() == "no":
+                break
+        self.vista.mostrar_mensaje(mensaje="gestion de veterinarios terminada!!!")
 

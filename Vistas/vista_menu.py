@@ -1,15 +1,15 @@
 class VistaMenu:
 
     def opciones(self):
-        print("[1] mostrar propietarios - [2] registrar propietario - [3} modificar estado")
-        print("[4] mostrar veterinarios - [5] registrar veterinario - [6] modificar estado")
+        print("[1] gestionar propietarios\n[2] gestionar veterinarios\n[3] gestionar mascotas")
 
     def elegir_opcion(self):
+        self.opciones()
         opcion = int(input("ingrese una opcion"))
         return opcion
 
     def seguir_trabajando(self):
-        opcion = input("quiere seguir trabajando? [si] [no]".lower())
+        opcion = input("quiere seguir trabajando con alguna otra cosa? [si] [no]".lower())
         return opcion
 
     def mostrar_mensaje(self, mensaje):

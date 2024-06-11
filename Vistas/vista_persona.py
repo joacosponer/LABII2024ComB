@@ -3,7 +3,7 @@ class VistaPersona:
 
 
 class VistaPropietario:
-
+    
     def registrar_nuevo_propietario(self):
         print("ingrese los datos que se le soliciten")
         nombre = input("nmbre")
@@ -30,6 +30,21 @@ class VistaPropietario:
         print("¡¡¡propietarios!!!")
         for i in lista:
             print(i)
+
+    def opciones(self):
+        print("[1] mostrar propietarios - [2] registrar propietario - [3} modificar estado")
+
+    def elegir_opcion(self):
+        self.opciones()
+        opcion = int(input("ingrese una opcion"))
+        return opcion
+
+    def seguir_trabajando(self):
+        opcion = input("quiere seguir trabajando con propietarios? [si] [no]".lower())
+        return opcion
+
+    def mostrar_mensaje(self, mensaje):
+        print(mensaje)
 
 
 class VistaVeterinario:
@@ -61,3 +76,18 @@ class VistaVeterinario:
         print("¡¡veterinarios!!")
         for i in lista:
             print(i)
+
+    def opciones(self):
+        print("[1] mostrar veterinarios - [2] registrar veterinario - [3] modificar estado")
+
+    def elegir_opcion(self):
+        self.opciones()
+        opcion = int(input("ingrese una opcion"))
+        return opcion
+
+    def seguir_trabajando(self):
+        opcion = input("quiere seguir trabajando con veterinarios? [si] [no]".lower())
+        return opcion
+
+    def mostrar_mensaje(self, mensaje):
+        print(mensaje)
