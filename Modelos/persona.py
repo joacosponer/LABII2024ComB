@@ -29,7 +29,8 @@ class Propietario(Persona):
     def __init__(self, nombre, direccion, mail, dni, codigo, estado):
         super().__init__(nombre, direccion, mail, dni, codigo, estado)
 
-
+    def get_propietario(self):
+        return f"{self.nombre}"
 
 
 class Veterinario(Persona):

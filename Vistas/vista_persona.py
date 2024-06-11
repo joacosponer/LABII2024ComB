@@ -3,7 +3,7 @@ class VistaPersona:
 
 
 class VistaPropietario:
-    
+
     def registrar_nuevo_propietario(self):
         print("ingrese los datos que se le soliciten")
         nombre = input("nmbre")

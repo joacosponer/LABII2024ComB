@@ -15,13 +15,8 @@ class ControladorMascota:
             lineas = file.readlines()
         for linea in lineas:
             datos = linea.strip().split(",")
-            nombre = datos[0]
-            fecha_nac = datos[1]
-            raza = datos[2]
-            cod_propietario = datos[3]
-            estado = datos[4]
-            obj_propietario = self.controlador_propietario.buscar_propietario(cod_propietario)
-            self.lista_mascotas.append(Mascota(nombre, fecha_nac, raza, obj_propietario, estado))
+            obj_propietario = self.controlador_propietario.buscar_propietario(datos[2])
+            self.lista_mascotas.append(Mascota(datos[0], datos[1], obj_propietario, datos[3], datos[4]))
 
     def registrar_mascotas(self):
         nombre, fecha_nac, raza, propietario, estado = self.view.registrar()
