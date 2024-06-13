@@ -14,9 +14,9 @@ class VistaMascota:
         estado = 1
         return nombre,fecha_nac,raza,propietario,estado
 
-    def nombre_mascota(self):
-        nombre = input("ingrese el nombre de la mascota que quiere cambiar su estado")
-        return nombre
+    def codigo_mascota(self):
+        codigo = input("ingrese el codigo de la mascota que quiere cambiar su estado")
+        return codigo
 
     def estado_mascota(self):
         estado = input("ingrese el estado al que quiere cambiar. [1]habilitar - [2]deshabilitar")

@@ -1,5 +1,5 @@
 from Modelos import persona
-from Modelos.vacunas import Vacuna
+from Modelos.vacuna import Vacuna
 from Modelos.mascota import Mascota
 from Modelos.raza import Raza
 from Controladores.controlador_menu import ControladorMenu

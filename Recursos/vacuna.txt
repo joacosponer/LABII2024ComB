@@ -1,1 +1,1 @@
-antirabia,perros,1,2000
+antirabia,perros,1,1

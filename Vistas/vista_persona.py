@@ -18,6 +18,9 @@ class VistaPropietario:
     def mostrar_mensaje(self, mensaje):
         print(mensaje)
 
+    def mostrar_estado(self, estado):
+        print(estado)
+
     def codigo_prop(self):
         codigo = input("ingrese el codigo del propietario que quiere cambiar su estado")
         return codigo
@@ -63,6 +66,9 @@ class VistaVeterinario:
 
     def mostrar_mensaje(self, mensaje):
         print(mensaje)
+
+    def mostrar_estado(self, estado):
+        print(estado)
 
     def codigo_veterinario(self):
         codigo = input("ingrese el codigo del veterinario que quiere cambiar su estado")

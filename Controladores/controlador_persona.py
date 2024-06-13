@@ -31,8 +31,7 @@ class ControladorPropietario:
 
     def devolver_estado(self):
         for propietario in self.lista_propietarios:
-            print(propietario.get_estado())
-
+            self.vista.mostrar_estado(propietario.get_estado())
     def modificar_estado(self):
         self.vista.mostrar_mensaje(mensaje="estado actual de los propietarios")
         self.devolver_estado()
@@ -86,7 +85,7 @@ class ControladorVeterinario:
 
     def devolver_estado(self):
         for veterinario in self.lista_veterinarios:
-            print(veterinario.get_estado())
+            self.vista.mostrar_estado(veterinario.get_estado())
 
     def modificar_estado(self):
         self.vista.mostrar_mensaje(mensaje="estado actual de los veterinarios")
