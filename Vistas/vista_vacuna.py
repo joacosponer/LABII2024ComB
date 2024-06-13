@@ -11,6 +11,7 @@ class VistaVacuna:
         tipo_vacuna = input("tipo vacuna:")
         estado = 1
         codigo = input("codigo:")
+        print("¡¡¡nuevo vacuna registrado con exito!!!")
         return nombre,tipo_vacuna,estado,codigo
 
     def codigo_vacuna(self):

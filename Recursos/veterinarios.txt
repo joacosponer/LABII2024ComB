@@ -1,1 +1,1 @@
-juan,san luis 123,juan@gmial.com,33890765,1,1,medico clinico
+juan,san luis 123,juan@gmial.com,33890765,1,1,medico clinico,1

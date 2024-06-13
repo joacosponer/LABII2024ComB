@@ -19,10 +19,10 @@ class ControladorMascota:
             self.lista_mascotas.append(Mascota(datos[0], datos[1], obj_propietario, datos[3], datos[4], datos[5]))
 
     def registrar_mascotas(self):
-        nombre, fecha_nac, raza, propietario, estado = self.vista.registrar()
+        nombre, fecha_nac, raza, propietario, estado, codigo = self.vista.registrar()
         with open("Recursos/mascotas.txt", "a") as file:
-            file.write(f"\n{nombre},{fecha_nac},{raza},{propietario},{estado}")
-        self.lista_mascotas.append(Mascota(nombre, fecha_nac, raza, propietario, estado))
+            file.write(f"\n{nombre},{fecha_nac},{raza},{propietario},{estado},{codigo}")
+        self.lista_mascotas.append(Mascota(nombre, fecha_nac, raza, propietario, estado, codigo))
 
     def devolver_estado(self):
         for mascota in self.lista_mascotas:

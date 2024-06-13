@@ -61,8 +61,9 @@ class VistaVeterinario:
         codigo = input("codigo")
         estado = "1"
         especialidad = input("especialidad")
+        num_matricula = input("N° matricula")
         print("¡¡¡nuevo veterinario registrado con exito!!!")
-        return nombre, direccion, mail, dni, codigo, estado, especialidad
+        return nombre, direccion, mail, dni, codigo, estado, especialidad, num_matricula
 
     def mostrar_mensaje(self, mensaje):
         print(mensaje)

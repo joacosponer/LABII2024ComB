@@ -12,7 +12,9 @@ class VistaMascota:
         raza = input("raza:")
         propietario = int(input("codigo del propietario"))
         estado = 1
-        return nombre,fecha_nac,raza,propietario,estado
+        codigo = input("codigo")
+        print("¡¡¡nuevo mascota registrado con exito!!!")
+        return nombre,fecha_nac,raza,propietario,estado,codigo
 
     def codigo_mascota(self):
         codigo = input("ingrese el codigo de la mascota que quiere cambiar su estado")

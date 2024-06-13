@@ -75,13 +75,13 @@ class ControladorVeterinario:
             for renglon in renglones:
                 datos = renglon.strip().split(",")
                 self.lista_veterinarios.append(
-                    Veterinario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]))
+                    Veterinario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]))
 
     def registrar_nuevo_veterinario(self):
-        nombre, direccion, mail, dni, codigo, estado, especialidad = self.vista.registrar_nuevo_veterinario()
+        nombre, direccion, mail, dni, codigo, estado, especialidad,num_matricula  = self.vista.registrar_nuevo_veterinario()
         with open("Recursos/veterinarios.txt", "a") as file:
-            file.write(f"\n{nombre},{direccion},{mail},{dni},{codigo},{estado},{especialidad}")
-        self.lista_veterinarios.append(Veterinario(nombre, direccion, mail, dni, codigo, estado, especialidad))
+            file.write(f"\n{nombre},{direccion},{mail},{dni},{codigo},{estado},{especialidad},{num_matricula}")
+        self.lista_veterinarios.append(Veterinario(nombre, direccion, mail, dni, codigo, estado, especialidad,num_matricula))
 
     def devolver_estado(self):
         for veterinario in self.lista_veterinarios:

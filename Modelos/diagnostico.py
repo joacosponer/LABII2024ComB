@@ -1,7 +1,7 @@
-class Tratamiento:
-    def __init__(self,diagnostico,estado):
-        self.diagnostico=diagnostico
-        self.estado=estado
+class Diagnostico:
+    def __init__(self,descripcion,estado):
+        self.descripcion = descripcion
+        self.estado = estado
 
     def __str__(self):
         return f"estado: {self.estado}, descripcion: {self.descripcion}"

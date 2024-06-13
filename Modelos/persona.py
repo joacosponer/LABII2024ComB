@@ -35,15 +35,16 @@ class Propietario(Persona):
 
 class Veterinario(Persona):
 
-    def __init__(self, nombre, direccion, mail, dni, codigo, estado, especialidad):
+    def __init__(self, nombre, direccion, mail, dni, codigo, estado, especialidad, num_matricula):
         super().__init__(nombre, direccion, mail, dni, codigo, estado)
         self.especialidad = especialidad
+        self.num_matricula = num_matricula
 
     def __str__(self):
-        return f"nombre: {self.nombre}, especialidad: {self.especialidad}"
+        return f"nombre: {self.nombre}, especialidad: {self.especialidad} , N°: {self.num_matricula}"
 
     def __repr__(self):
-        return f"nombre: {self.nombre}, especialidad: {self.especialidad}"
+        return f"nombre: {self.nombre}, especialidad: {self.especialidad} , N°: {self.num_matricula}"
 
 
 
