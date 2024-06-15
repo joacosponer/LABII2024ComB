@@ -65,6 +65,11 @@ class ControladorMascota:
     def mostrar_mascotas(self):
         self.vista.mostrar(self.lista_mascotas)
 
+    def buscar_mascota(self, codigo):
+        for mascota in self.lista_mascotas:
+            if mascota.codigo == codigo:
+                return mascota
+
     def generar_codigo(self):
         ultima_mascota = self.lista_mascotas[-1]
         return int(ultima_mascota.codigo) + 1

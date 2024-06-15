@@ -38,6 +38,11 @@ class ControladorVacuna:
                     vacuna.deshabilitar()
                 self.vista.mostrar_mensaje(mensaje=f"¡¡el estado de {vacuna.nombre} fue actualizado a {sig_estado}")
 
+    def buscar_vacuna(self, codigo):
+        for vacuna in self.lista_vacunas:
+            if vacuna.codigo == codigo:
+                return vacuna
+
     def menu_vacuna(self):
         while True:
             opcion = self.vista.elegir_opcion()

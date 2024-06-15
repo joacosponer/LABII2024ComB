@@ -109,6 +109,11 @@ class ControladorVeterinario:
     def mostrar(self):
         self.vista.mostrar_veterinarios(self.lista_veterinarios)
 
+    def buscar_veterinario(self, codigo):
+        for veterinario in self.lista_veterinarios:
+            if veterinario.codigo == codigo:
+                return veterinario
+
     def menu_veterinario(self):
         while True:
             opcion = self.vista.elegir_opcion()

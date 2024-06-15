@@ -20,6 +20,11 @@ class ControladorDiagnostico:
             file.write(f"\n{descripcion},{estado}")
         self.lista_diagnostico.append(Diagnostico(descripcion,estado))
 
+    def buscar_diagnostico(self, codigo):
+        for diagnostico in self.lista_diagnostico:
+            if diagnostico.codigo == codigo:
+                return diagnostico
+
     def menu_diagnostico(self):
         while True:
             opcion = self.vista.elegir_opcion()
