@@ -47,6 +47,10 @@ class ControladorPropietario:
                 self.vista.mostrar_mensaje(
                     mensaje=f"¡¡el estado de {propietario.nombre} fue actualizado a {sig_estado}")
 
+    def get_lista_propietarios(self):
+        for propietario in self.lista_propietarios:
+            return f"{propietario.codigo} - {propietario.nombre}"
+
     def mostrar(self):
         self.vista.mostrar_props(self.lista_propietarios)
 
@@ -117,4 +121,3 @@ class ControladorVeterinario:
             if self.vista.seguir_trabajando() == "no":
                 break
         self.vista.mostrar_mensaje(mensaje="gestion de veterinarios terminada!!!")
-

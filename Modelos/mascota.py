@@ -9,10 +9,10 @@ class Mascota:
         self.codigo = codigo
 
     def __str__(self):
-        return f"nombre: {self.nombre}, raza: {self.raza}, propietario: {self.propietario.get_propietario()}"
+        return f"nombre: {self.nombre}, raza: {self.raza.nombre}, propietario: {self.propietario.get_propietario()}"
 
     def __repr__(self):
-        return f"nombre: {self.nombre}, raza: {self.raza}, propietario: {self.propietario.get_propietario()}"
+        return f"nombre: {self.nombre}, raza: {self.raza.nombre}, propietario: {self.propietario.get_propietario()}"
 
     def habilitar(self):
         self.estado = 1
@@ -22,4 +22,7 @@ class Mascota:
 
     def get_estado(self):
         return f"codigo: {self.codigo} - {self.nombre} - estado: {self.estado}"
+
+    def set_nombre(self, nombre):
+        self.nombre = nombre
 

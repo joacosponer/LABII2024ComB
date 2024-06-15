@@ -1,7 +1,8 @@
 class VistaMenu:
 
     def opciones(self):
-        print("[1] gestionar propietarios\n[2] gestionar veterinarios\n[3] gestionar mascotas\n[4] gestionar vacunas\n[5] gestionar diagnosticos")
+        print("[1] gestionar propietarios\n[2] gestionar veterinarios\n[3] gestionar mascotas\n[4] gestionar razas\n[5] gestionar diagnosticos\n"
+              "[6] gestionar vacunas")
 
     def elegir_opcion(self):
         self.opciones()

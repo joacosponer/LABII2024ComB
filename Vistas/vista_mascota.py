@@ -5,16 +5,29 @@ class VistaMascota:
         for i in lista:
             print(i)
 
-    def registrar(self):
-        print("ingrese los datos que se le soliciten")
-        nombre = input("nombre:")
+    def registrar_nombre(self):
+        nombre = input("nombre de la mascota:")
+        return nombre
+
+    def registrar_fecha_de_nacimiento(self):
         fecha_nac = input("fecha nacimiento:")
-        raza = input("raza:")
-        propietario = int(input("codigo del propietario"))
-        estado = 1
-        codigo = input("codigo")
-        print("¡¡¡nuevo mascota registrado con exito!!!")
-        return nombre,fecha_nac,raza,propietario,estado,codigo
+        return fecha_nac
+
+    def registrar_raza(self):
+        raza = input("codigo de la raza:")
+        return raza
+
+    def registrar_propietario(self):
+        propietario = int(input("codigo del propietario:"))
+        return propietario
+
+    def mostrar_razas(self, raza):
+        print("razas ya registrardas")
+        print(raza)
+
+    def mostrar_propietarios(self, propietario):
+        print("propietarios ya registrados")
+        print(propietario)
 
     def codigo_mascota(self):
         codigo = input("ingrese el codigo de la mascota que quiere cambiar su estado")
@@ -26,6 +39,15 @@ class VistaMascota:
 
     def mostrar_estado(self, estado):
         print(estado)
+
+    def opcion_datos(self):
+        print("nombre\nfecha de nacimiento\ncodigo del propietario\nestado\ncodigo de la raza")
+        opcion = input("ingrese una opcion".lower())
+        return opcion
+
+    def set_nombre(self):
+        nombre = input("ingrese el nuevo nombre")
+        return nombre
 
     def opciones(self):
         print("[1] mostrar mascotas - [2] registrar nueva mascota - [3] modificar estado")

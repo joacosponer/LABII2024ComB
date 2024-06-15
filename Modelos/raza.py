@@ -7,9 +7,8 @@ class Raza:
         self.estado = estado
 
     def __str__(self):
-        return f"estado: {self.estado}, codigo: {self.codigo},nombre: {self.nombre}, especie: {self.especie} "
-
+        return f"raza: {self.nombre} - especie a la que pertenece: {self.especie}"
 
     def __repr__(self):
-        return f"estado: {self.estado}, codigo: {self.codigo},nombre: {self.nombre}, especie: {self.especie} "
+        return f"raza: {self.nombre} - especie a la que pertenece: {self.especie}"
 
