@@ -1,5 +1,5 @@
 class FichaMedica:
-    def __init__(self,descripcion,mascota,estado):
+    def __init__(self, descripcion, mascota, estado):
         self.descripcion = descripcion
         self.mascota = mascota
         self.estado = estado
@@ -9,4 +9,3 @@ class FichaMedica:
 
     def __repr__(self):
         return f"ficha_medica - descripcion: {self.descripcion}, mascota: {self.mascota.nombre}"
-

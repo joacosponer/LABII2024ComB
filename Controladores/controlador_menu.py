@@ -27,7 +27,7 @@ class ControladorMenu:
         self.controlador_vacuna.cargar_vacunas()
         self.controlador_diagnostico.cargar_diagnostico()
         self.controlador_raza.cargar_razas()
-        self.controlador_fichaMedica.cargar_fichaMedia()
+        self.controlador_fichaMedica.cargar_fichaMedica()
         while True:
             opcion = self.vista.elegir_opcion()
             if opcion == 1:

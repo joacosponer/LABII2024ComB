@@ -28,5 +28,5 @@ class ControladorConsulta:
             obj_veterinario = self.controlador_veterinario.buscar_veterinario(datos[1])
             obj_diagnostico = self.controlador_diagnostico.buscar_diagnostico(datos[2])
             obj_vacuna = self.controlador_vacuna.buscar_vacuna(datos[3])
-            obj_fichaMedica = self.controlador_fichaMedica
+            obj_fichaMedica = self.controlador_fichaMedica.buscar_fichaMedica(datos[4])
             self.lista_consultas.append(Consulta(datos[0], obj_veterinario, obj_diagnostico, obj_vacuna, obj_fichaMedica, datos[5]))

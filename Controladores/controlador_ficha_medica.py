@@ -10,7 +10,7 @@ class ControladorFichaMedica:
         self.controlador_mascota = mascota
         self.lista_fichaMedica = []
 
-    def cargar_fichaMedia(self):
+    def cargar_fichaMedica(self):
         self.controlador_mascota.cargar_mascotas()
         with open("Recursos/fichaMedica.txt") as file:
             lineas = file.readlines()
@@ -19,8 +19,6 @@ class ControladorFichaMedica:
             obj_mascota = self.controlador_mascota.buscar_mascota(datos[1])
             self.lista_fichaMedica.append(FichaMedica(datos[0], obj_mascota, datos[2]))
 
-    def registrar_fichaMedica(self):
-        pass
 
     def mostrar_fichaMedica(self):
         self.vista.mostrar(self.lista_fichaMedica)
