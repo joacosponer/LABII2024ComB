@@ -20,6 +20,10 @@ class Mascota:
     def deshabilitar(self):
         self.estado = 0
 
+    def is_activa(self):
+        if self.estado == 1:
+            return True
+
     def get_estado(self):
         return f"codigo: {self.codigo} - {self.nombre} - estado: {self.estado}"
 

@@ -20,3 +20,5 @@ class Vacuna:
     def deshabilitar(self):
         self.estado = 0
 
+    def get_vacuna(self):
+        return f"{self.nombre} - {self.codigo}"

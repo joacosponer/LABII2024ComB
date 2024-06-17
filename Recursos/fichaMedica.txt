@@ -1,1 +1,1 @@
-enfermedad : rabia,1,1
+enfermedad : rabia,1,1,1

@@ -4,16 +4,21 @@ class VistaPersona:
 
 class VistaPropietario:
 
-    def registrar_nuevo_propietario(self):
-        print("ingrese los datos que se le soliciten")
-        nombre = input("nmbre")
-        direccion = input("direccion")
-        mail = input("mail")
-        dni = input("dni")
-        codigo = input("codigo")
-        estado = "1"
-        print("¡¡¡cliente registrado con exito!!!")
-        return nombre, direccion, mail, dni, codigo, estado
+    def registrar_nombre(self):
+        nombre = input("nombre:")
+        return nombre
+
+    def registrar_direccion(self):
+        direccion = input("direccion:")
+        return direccion
+
+    def registrar_mail(self):
+        mail = input("mail:")
+        return mail
+
+    def registrar_dni(self):
+        dni = input("DNI:")
+        return dni
 
     def mostrar_mensaje(self, mensaje):
         print(mensaje)
@@ -52,18 +57,30 @@ class VistaPropietario:
 
 class VistaVeterinario:
 
-    def registrar_nuevo_veterinario(self):
-        print("ingrese los datos que se le soliciten")
-        nombre = input("nmbre")
-        direccion = input("direccion")
-        mail = input("mail")
-        dni = input("dni")
-        codigo = input("codigo")
-        estado = "1"
-        especialidad = input("especialidad")
-        num_matricula = input("N° matricula")
-        print("¡¡¡nuevo veterinario registrado con exito!!!")
-        return nombre, direccion, mail, dni, codigo, estado, especialidad, num_matricula
+    def registrar_nombre(self):
+        nombre = input("nombre:")
+        return nombre
+
+    def registrar_direccion(self):
+        direccion = input("direccion:")
+        return direccion
+
+    def registrar_mail(self):
+        mail = input("mail:")
+        return mail
+
+    def registrar_dni(self):
+        dni = input("DNI:")
+        return dni
+
+    def registra_especialidad(self):
+        especialidad = input("especialidad:")
+        return especialidad
+
+    def registrar_num_matricula(self):
+        num_matricula = input("numero de matricula")
+        return num_matricula
+
 
     def mostrar_mensaje(self, mensaje):
         print(mensaje)

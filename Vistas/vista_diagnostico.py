@@ -1,14 +1,16 @@
 class VistaDiagnostico:
 
-    def registrar(self):
-        print("ingrese los datos que se le pidan")
-        descripcion = input("descripcion:")
-        estado = 1
-        print("¡¡¡nuevo diagnostico registrado con exito!!!")
-        return descripcion,estado
+    def mostrar(self, lista):
+        print("diagnosticos que se hicieron")
+        for i in lista:
+            print(i)
+
+    def registrar_descripcion(self):
+        descripcion = input("ingrese el diagnostico que se hizo:")
+        return descripcion
 
     def opciones(self):
-        print("[1] registrar diagnosticos")
+        print("[1] mostrar diagnosticos")
 
     def elegir_opcion(self):
         self.opciones()

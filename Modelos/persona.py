@@ -32,6 +32,9 @@ class Propietario(Persona):
     def get_propietario(self):
         return f"{self.nombre}"
 
+    def codigo_propietario(self):
+        return self.codigo
+
 
 class Veterinario(Persona):
 
@@ -45,6 +48,9 @@ class Veterinario(Persona):
 
     def __repr__(self):
         return f"nombre: {self.nombre}, especialidad: {self.especialidad} , N°: {self.num_matricula}"
+
+    def get_veterinario(self):
+        return f"{self.nombre} - {self.codigo}"
 
 
 

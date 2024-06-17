@@ -15,7 +15,12 @@ class ControladorVacuna:
             self.lista_vacunas.append(Vacuna(datos[0], datos[1], datos[2], datos[3]))
 
     def registrar_vacuna(self):
-        nombre, tipo_vacuna, estado, codigo = self.vista.registrar()
+        self.vista.mostrar_mensaje(mensaje="ingrese los datos que se le soliciten")
+        nombre = self.vista.registrar_nombre()
+        tipo_vacuna = self.vista.registrar_tipo()
+        estado = 1
+        codigo = self.generar_codigo()
+        self.vista.mostrar_mensaje(mensaje="¡¡¡vacuna registrada con exito!!!")
         with open("Rcursos/vacuna.txt", "a") as file:
             file.write(f"\n{nombre},{tipo_vacuna},{estado},{codigo}")
         self.lista_vacunas.append(Vacuna(nombre,tipo_vacuna,estado,codigo))
@@ -43,6 +48,17 @@ class ControladorVacuna:
             if vacuna.codigo == codigo:
                 return vacuna
 
+    def mostrar_vacunas(self):
+        self.vista.mostrar(self.lista_vacunas)
+
+    def get_lista_vacunas(self):
+        for vacuna in self.lista_vacunas:
+            return vacuna.get_vacuna()
+
+    def generar_codigo(self):
+        ultima_vacuna = self.lista_vacunas[-1]
+        return int(ultima_vacuna.codigo) + 1
+
     def menu_vacuna(self):
         while True:
             opcion = self.vista.elegir_opcion()
@@ -56,7 +72,6 @@ class ControladorVacuna:
                 break
         self.vista.mostrar_mensaje(mensaje="gestion de vacunas terminada!!!")
 
-    def mostrar_vacunas(self):
-        self.vista.mostrar(self.lista_vacunas)
+
 
 

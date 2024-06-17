@@ -1,1 +1,2 @@
-rabia,1
+rabia,1,1
+bichera,2,1

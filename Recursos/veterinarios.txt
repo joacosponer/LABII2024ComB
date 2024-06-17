@@ -1,1 +1,2 @@
-juan,san luis 123,juan@gmial.com,33890765,1,1,medico clinico,1
+juan,san luis 123,juan@gmial.com,33890765,1,1,medico clinico,678
+jorge,mitre 456,jorge@gmail.com,8765432,2,1,cirujano,345

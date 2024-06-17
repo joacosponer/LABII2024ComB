@@ -1,5 +1,12 @@
 class VistaMascota:
 
+    def codigo_prop(self):
+        codigo = input("ingrese el codigo del propietario que necesite:")
+        return codigo
+
+    def mostrar_mascotas_activas(self, mascota):
+        print(mascota)
+
     def mostrar(self, lista):
         print("¡¡mascotas!!")
         for i in lista:
@@ -50,7 +57,8 @@ class VistaMascota:
         return nombre
 
     def opciones(self):
-        print("[1] mostrar mascotas - [2] registrar nueva mascota - [3] modificar estado")
+        print("[1] mostrar mascotas - [2] registrar nueva mascota - [3] modificar estado"
+              " - [4] calcular cantidad de mascotas de un propietario")
 
     def elegir_opcion(self):
         self.opciones()

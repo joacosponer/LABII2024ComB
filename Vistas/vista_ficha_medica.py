@@ -4,6 +4,11 @@ class VistaFichaMedica:
         for i in lista:
             print(i)
 
+    def ingresar_codigo(self):
+        codigo = input("ingrese el codigo de la mascota que quiere conocer su ficha medica")
+        return codigo
+
+
     def opciones(self):
         print("[1] mostrar fichas medicas")
 

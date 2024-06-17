@@ -1,5 +1,12 @@
 class VistaRaza:
 
+    def registrar_especie(self):
+        especie = input("especie:")
+        return especie
+    def registrar_nombre(self):
+        nombre = input("nombre:")
+        return nombre
+
     def registrar(self):
         print("ingrese los datos que se le pidan")
         codigo = input("codigo:")
@@ -22,7 +29,7 @@ class VistaRaza:
         return opcion
 
     def seguir_trabajando(self):
-        opcion = input("quiere seguir trabajando con las mascotas? [si] [no]".lower())
+        opcion = input("quiere seguir trabajando con las razas? [si] [no]".lower())
         return opcion
 
     def mostrar_mensaje(self, mensaje):

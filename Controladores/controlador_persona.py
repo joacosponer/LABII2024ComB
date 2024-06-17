@@ -19,7 +19,14 @@ class ControladorPropietario:
             self.lista_propietarios.append(Propietario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]))
 
     def registrar_nuevo_propietario(self):
-        nombre, direccion, mail, dni, codigo, estado = self.vista.registrar_nuevo_propietario()
+        self.vista.mostrar_mensaje(mensaje="ingrese los datos que se le soliciten")
+        nombre = self.vista.registrar_nombre()
+        direccion = self.vista.registrar_direccion()
+        mail = self.vista.registrar_mail()
+        dni = self.vista.registrar_dni()
+        codigo = self.generar_codigo()
+        estado = 1
+        self.vista.mostrar_mensaje(mensaje="¡¡¡cliente registrado con exito!!!")
         with open("Recursos/propietarios.txt", "a") as file:
             file.write(f"\n{nombre},{direccion},{mail},{dni},{codigo},{estado}")
         self.lista_propietarios.append(Propietario(nombre, direccion, mail, dni, codigo, estado))
@@ -54,6 +61,11 @@ class ControladorPropietario:
     def mostrar(self):
         self.vista.mostrar_props(self.lista_propietarios)
 
+    def generar_codigo(self):
+        ultimo_prpoietario = self.lista_propietarios[-1]
+        return int(ultimo_prpoietario.codigo) + 1
+
+
     def menu_propietario(self):
         while True:
             opcion = self.vista.elegir_opcion()
@@ -82,7 +94,16 @@ class ControladorVeterinario:
                     Veterinario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]))
 
     def registrar_nuevo_veterinario(self):
-        nombre, direccion, mail, dni, codigo, estado, especialidad,num_matricula  = self.vista.registrar_nuevo_veterinario()
+        self.vista.mostrar_mensaje(mensaje="ingrese los datos que se le soliciten")
+        nombre = self.vista.registrar_nombre()
+        direccion = self.vista.registrar_direccion()
+        mail = self.vista.registrar_mail()
+        dni = self.vista.registrar_dni()
+        codigo = self.generar_codigo()
+        estado = 1
+        especialidad = self.vista.registra_especialidad()
+        num_matricula = self.vista.registrar_num_matricula()
+        self.vista.mostrar_mensaje(mensaje="¡¡¡nuevo veterinario registrado con exito!!!")
         with open("Recursos/veterinarios.txt", "a") as file:
             file.write(f"\n{nombre},{direccion},{mail},{dni},{codigo},{estado},{especialidad},{num_matricula}")
         self.lista_veterinarios.append(Veterinario(nombre, direccion, mail, dni, codigo, estado, especialidad,num_matricula))
@@ -113,6 +134,14 @@ class ControladorVeterinario:
         for veterinario in self.lista_veterinarios:
             if veterinario.codigo == codigo:
                 return veterinario
+
+    def get_lista_veterinarios(self):
+        for veterinario in self.lista_veterinarios:
+            return veterinario.get_veterinario()
+
+    def generar_codigo(self):
+        ultimo_veterinario = self.lista_veterinarios[-1]
+        return int(ultimo_veterinario.codigo) + 1
 
     def menu_veterinario(self):
         while True:

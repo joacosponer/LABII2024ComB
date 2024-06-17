@@ -4,15 +4,15 @@ class VistaVacuna:
         print("¡¡vacunas!!")
         for i in lista:
             print(i)
-            
-    def registrar(self):
-        print("ingrese las opciones que se le pidan")
+
+    def registrar_nombre(self):
         nombre = input("nombre:")
-        tipo_vacuna = input("tipo vacuna:")
-        estado = 1
-        codigo = input("codigo:")
-        print("¡¡¡nuevo vacuna registrado con exito!!!")
-        return nombre,tipo_vacuna,estado,codigo
+        return nombre
+
+    def registrar_tipo(self):
+        tipo = input("tipo de vacuna:")
+        return tipo
+
 
     def codigo_vacuna(self):
         codigo = input("ingrese el codigo de la vacuna que quiere cambiar su estado")
