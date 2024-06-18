@@ -94,7 +94,7 @@ class ControladorMascota:
             self.vista.mostrar_mensaje(mensaje=f"{propietario} tiene {cont_mascotas} mascotas")
         if cont_mascotas == 1:
             self.vista.mostrar_mensaje(mensaje=f"{propietario} tiene {cont_mascotas} mascota")
-        else:
+        if cont_mascotas < 1:
             self.vista.mostrar_mensaje(mensaje=f"{propietario} no tiene mascotas")
 
     def get_lista_mascotas(self):
