@@ -65,7 +65,6 @@ class ControladorPropietario:
         ultimo_prpoietario = self.lista_propietarios[-1]
         return int(ultimo_prpoietario.codigo) + 1
 
-
     def menu_propietario(self):
         while True:
             opcion = self.vista.elegir_opcion()

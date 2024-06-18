@@ -1,2 +1,3 @@
 rabia,1,1
 bichera,2,1
+fractura pata trasera derecha,3,1

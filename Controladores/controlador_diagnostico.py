@@ -20,6 +20,7 @@ class ControladorDiagnostico:
         estado = 1
         with open("Recursos/diagnostico.txt", "a") as file:
             file.write(f"\n{descripcion},{codigo},{estado}")
+        self.vista.mostrar_mensaje(mensaje=f"el codigo del diagnostico recien creado es {codigo}")
         self.lista_diagnostico.append(Diagnostico(descripcion,codigo,estado))
 
     def mostrar_diagnosticos(self):

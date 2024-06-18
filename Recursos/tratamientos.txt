@@ -1,0 +1,3 @@
+nada,1,1
+no permitir que se muerda el yeso,2,1
+no permitir mucho movimiento,3,1

@@ -9,24 +9,29 @@ class VistaConsulta:
         return codigo
 
     def registrar_fecha(self):
-        fecha = input("ingrese la fecha de la consulta xx/xx/xxxx")
+        fecha = input("ingrese la fecha de la consulta xx/xx/xxxx:")
         return fecha
 
     def registrar_vet(self):
-        veterinario = input("ingrese el codigo del veterinario que hizo la consulta")
+        veterinario = input("ingrese el codigo del veterinario que hizo la consulta:")
         return veterinario
 
     def registrar_diagnostico(self):
-        diagnostico = input("ingrese el codigo del diagnostico que se le hizo")
+        diagnostico = input("ingrese el codigo del diagnostico que se le hizo:")
         return diagnostico
 
     def registrar_vacuna(self):
-        vacuna = input("ingrese el codigo de la vacuna que se le coloco.\nsi la vacuna no esta registrada ingerese [0]")
+        vacuna = input("ingrese el codigo de la vacuna que se le coloco:")
         return vacuna
 
     def registrar_fichamedica(self):
-        fichamedica = input("ingrese el codigo de la mascota a la que se le hizo la consulta")
+        fichamedica = input("ingrese el codigo de la mascota a la que se le hizo la consulta:")
         return fichamedica
+
+    def registrar_tratamiento(self):
+        tratamiento = input("ingrese el codigo del tratamiento que se receto:")
+        return tratamiento
+
 
     def mostrar_vacunas(self, vacuna):
         print("vacunas ya registradas")
@@ -46,8 +51,12 @@ class VistaConsulta:
         opcion = int(input("ingrese una opcion"))
         return opcion
 
-    def seguir_trabajando(self):
+    def seguir_trabajando_fichasmedicas(self):
         opcion = input("quiere seguir trabajando con las fichas medicas? [si] [no]".lower())
+        return opcion
+
+    def seguir_trabajando_consultas(self):
+        opcion = input("quiere seguir trabajando con las consultas? [si] [no]".lower())
         return opcion
 
     def mostrar_mensaje(self, mensaje):

@@ -2,16 +2,13 @@ from Vistas.vista_mascota import VistaMascota
 from Modelos.mascota import Mascota
 from Controladores.controlador_persona import ControladorPropietario
 from Controladores.controlador_raza import ControladorRaza
-from Controladores.controlador_consulta import ControladorConsulta
 
 
 class ControladorMascota:
-    def __init__(self, propietario=ControladorPropietario(), raza=ControladorRaza(), consulta=ControladorConsulta(),
-                 vista=VistaMascota()):
+    def __init__(self, propietario=ControladorPropietario(), raza=ControladorRaza(), vista=VistaMascota()):
         self.vista = vista
         self.controlador_propietario = propietario
         self.controlador_raza = raza
-        self.controlador_consulta = consulta
         self.lista_mascotas = []
         self.mascotas_activas = []
 
@@ -99,6 +96,10 @@ class ControladorMascota:
             self.vista.mostrar_mensaje(mensaje=f"{propietario} tiene {cont_mascotas} mascota")
         else:
             self.vista.mostrar_mensaje(mensaje=f"{propietario} no tiene mascotas")
+
+    def get_lista_mascotas(self):
+        for mascota in self.lista_mascotas:
+            return f"{mascota.codigo} - {mascota.nombre}"
 
     def menu_mascota(self):
         while True:
