@@ -105,7 +105,8 @@ class ControladorVeterinario:
         self.vista.mostrar_mensaje(mensaje="¡¡¡nuevo veterinario registrado con exito!!!")
         with open("Recursos/veterinarios.txt", "a") as file:
             file.write(f"\n{nombre},{direccion},{mail},{dni},{codigo},{estado},{especialidad},{num_matricula}")
-        self.lista_veterinarios.append(Veterinario(nombre, direccion, mail, dni, codigo, estado, especialidad,num_matricula))
+        self.lista_veterinarios.append(Veterinario(nombre, direccion, mail, dni, codigo, estado,
+                                                   especialidad, num_matricula))
 
     def devolver_estado(self):
         for veterinario in self.lista_veterinarios:

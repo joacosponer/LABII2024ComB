@@ -18,7 +18,7 @@ class VistaDiagnostico:
         return opcion
 
     def seguir_trabajando(self):
-        opcion = input("quiere seguir trabajando con las mascotas? [si] [no]".lower())
+        opcion = input("quiere seguir trabajando con las diagnostico? [si] [no]".lower())
         return opcion
 
     def mostrar_mensaje(self, mensaje):

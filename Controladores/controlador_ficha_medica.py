@@ -29,21 +29,6 @@ class ControladorFichaMedica:
         codigo = self.vista.ingresar_codigo()
         return codigo
 
-    """def cargar_consultas_fichamedica(self):
-        for consulta, fichaMedica in self.lista_consultas, self.lista_fichamedica:
-            if consulta.mascota == fichaMedica.mascota:
-                fichaMedica.cargar_consultas_fichamedica(consulta)
-
-        for consulta in self.lista_consultas:
-            if consulta.mascota.codigo == codigo:
-                return consulta
-        for fichaMedica in self.lista_fichaMedica:
-            if fichaMedica.mascota.codigo == codigo:
-                return fichaMedica
-
-    def cargar_lista_consultas(self):
-        self.lista_consultas.append(self.controlador_consulta.get_lista_consultas())"""
-
     def menu_fichamedica(self):
         while True:
             opcion = self.vista.elegir_opcion()
